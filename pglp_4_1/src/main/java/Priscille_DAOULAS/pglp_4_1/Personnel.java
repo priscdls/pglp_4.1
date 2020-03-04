@@ -34,5 +34,7 @@ public final class Personnel implements InterfacePersonnel {
 		numTel = builder.numTel;
 	}
 	
-	
+	public void print() {
+		System.out.println("Personnel");
+	}
 }
