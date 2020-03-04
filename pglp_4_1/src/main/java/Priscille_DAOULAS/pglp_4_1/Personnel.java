@@ -2,7 +2,7 @@ package Priscille_DAOULAS.pglp_4_1;
 
 import java.util.ArrayList;
 
-public final class Personnel {
+public final class Personnel implements InterfacePersonnel {
 
 	private final String nom;
 	private final String prenom;
@@ -15,11 +15,15 @@ public final class Personnel {
 		private final java.time.LocalDate dateNaissance;
 		private final ArrayList<Integer> numTel;
 		
-		public Builder(String nom, String prenom, java.time.LocalDate dateNaissance) {
+		public Builder(String nom, String prenom, java.time.LocalDate dateNaissance, ArrayList<Integer> numTel) {
 			this.nom = nom;
 			this.prenom = prenom;
 			this.dateNaissance = dateNaissance;
-			this.numTel = new ArrayList<Integer>();
+			this.numTel = numTel;
+		}
+		
+		public Personnel build() {
+			return new Personnel(this);
 		}
 	}
 	
@@ -29,4 +33,6 @@ public final class Personnel {
 		dateNaissance = builder.dateNaissance;
 		numTel = builder.numTel;
 	}
+	
+	
 }
