@@ -48,10 +48,12 @@ public final class Personnel implements InterfacePersonnel {
 		 * @param n Nom du membre du personnel.
 		 * @param p Prénom du membre du personnel.
 		 * @param date Date de naissance du membre du personnel.
-		 * @param numListe des numéro de téléphone du membre du personnel.
+		 * @param num Liste des numéro de téléphone 
+		 * du membre du personnel.
 		 */
 		public Builder(final String n, final String p,
-				final java.time.LocalDate date, final ArrayList<String> num) {
+				final java.time.LocalDate date,
+				final ArrayList<String> num) {
 			this.nom = n;
 			this.prenom = p;
 			this.dateNaissance = date;
@@ -70,7 +72,7 @@ public final class Personnel implements InterfacePersonnel {
 	 * Constructeur.
 	 * @param builder
 	 */
-	public Personnel(Builder builder) {
+	public Personnel(final Builder builder) {
 		nom = builder.nom;
 		prenom = builder.prenom;
 		dateNaissance = builder.dateNaissance;
@@ -81,7 +83,8 @@ public final class Personnel implements InterfacePersonnel {
 	 */
 	public void print() {
 		System.out.println("Nom : " + nom + ", Prenom : " + prenom
-				+ ", Date de Naissance : " + dateNaissance 
-				+ ", Numero(s) de telephone : " + numTel + "\n");
+				+ ", Date de Naissance : " + dateNaissance
+				+ ", Numero(s) de telephone : " + numTel
+				+ "\n");
 	}
 }

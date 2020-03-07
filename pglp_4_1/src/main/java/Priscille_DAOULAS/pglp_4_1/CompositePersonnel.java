@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Pattern Composite CompositePersonnel implémentant l'interface InterfacePersonnel.
+ * Pattern Composite CompositePersonnel
+ * implémentant l'interface InterfacePersonnel.
  */
 public class CompositePersonnel implements InterfacePersonnel {
 	/**
 	 * Liste de membres du personnels d'un même composite.
 	 */
-	private ArrayList<InterfacePersonnel> list = new ArrayList<InterfacePersonnel>();
+	private ArrayList<InterfacePersonnel> list = 
+			new ArrayList<InterfacePersonnel>();
 	/**
 	 * Identifiant d'un composite.
 	 */
@@ -30,8 +32,8 @@ public class CompositePersonnel implements InterfacePersonnel {
 	 * Fonction d'écriture des informations du composite.
 	 */
 	public void print() {
-		System.out.println("Id : "+id);
-		for(InterfacePersonnel intP : list) {
+		System.out.println("Id : " + id);
+		for (InterfacePersonnel intP : list) {
 			intP.print();
 		}
 	}
@@ -50,15 +52,16 @@ public class CompositePersonnel implements InterfacePersonnel {
 		list.remove(intP);
 	}
 	/**
-	 * Fonction qui crée un Itérateur de la liste des personnes du Composite.
-	 * @return L'terateur
+	 * Fonction qui crée un Itérateur
+	 * de la liste des personnes du Composite.
+	 * @return L'iterateur
 	 */
 	public Iterator<InterfacePersonnel> iterateur() {
 		return list.iterator();
 	}
 	/**
 	 * Getter de l'identifiant du Composite.
-	 * @return lLidentifiant
+	 * @return L'identifiant
 	 */
 	public final int getId() {
 		return id;
