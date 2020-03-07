@@ -38,19 +38,29 @@ public class CompositePersonnel implements InterfacePersonnel {
 	/**
 	 * Fonction qui ajoute une personne a la liste du personnel.
 	 * @param intP La personne a ajouter
-	 * @return Le composite
 	 */
-	public CompositePersonnel add(final InterfacePersonnel intP) {
+	public void add(final InterfacePersonnel intP) {
 		list.add(intP);
-		return this;
 	}
 	/**
 	 * Fonction qui enlève une personne a la liste du personnel.
 	 * @param intP La personne a enlever
-	 * @return Le composite
 	 */
-	public CompositePersonnel remove(final InterfacePersonnel intP) {
+	public void remove(final InterfacePersonnel intP) {
 		list.remove(intP);
-		return this;
+	}
+	/**
+	 * Fonction qui crée un Itérateur de la liste des personnes du Composite.
+	 * @return L'terateur
+	 */
+	public Iterator<InterfacePersonnel> iterateur() {
+		return list.iterator();
+	}
+	/**
+	 * Getter de l'identifiant du Composite.
+	 * @return lLidentifiant
+	 */
+	public final int getId() {
+		return id;
 	}
 }
