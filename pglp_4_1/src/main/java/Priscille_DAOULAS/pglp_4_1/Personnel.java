@@ -21,7 +21,7 @@ public final class Personnel implements InterfacePersonnel {
 	/**
 	 * Liste des numéro de téléphone du membre du personnel.
 	 */
-	private final ArrayList<Integer> numTel;
+	private final ArrayList<String> numTel;
 	/**
 	 * Pattern Builder.
 	 *
@@ -42,7 +42,7 @@ public final class Personnel implements InterfacePersonnel {
 		/**
 		 * Liste des numéros de téléphone du membre du personnel.
 		 */
-		private final ArrayList<Integer> numTel;
+		private final ArrayList<String> numTel;
 		/**
 		 * Constructeur.
 		 * @param n Nom du membre du personnel.
@@ -51,7 +51,7 @@ public final class Personnel implements InterfacePersonnel {
 		 * @param numListe des numéro de téléphone du membre du personnel.
 		 */
 		public Builder(final String n, final String p,
-				final java.time.LocalDate date, final ArrayList<Integer> num) {
+				final java.time.LocalDate date, final ArrayList<String> num) {
 			this.nom = n;
 			this.prenom = p;
 			this.dateNaissance = date;
@@ -68,7 +68,7 @@ public final class Personnel implements InterfacePersonnel {
 	}
 	/**
 	 * Constructeur.
-	 * @param builder Le builder de la classe Personnel
+	 * @param builder
 	 */
 	public Personnel(Builder builder) {
 		nom = builder.nom;
