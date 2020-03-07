@@ -48,7 +48,7 @@ public final class Personnel implements InterfacePersonnel {
 		 * @param n Nom du membre du personnel.
 		 * @param p Prénom du membre du personnel.
 		 * @param date Date de naissance du membre du personnel.
-		 * @param num Liste des numéro de téléphone 
+		 * @param num Liste des numéro de téléphone.
 		 * du membre du personnel.
 		 */
 		public Builder(final String n, final String p,
@@ -84,7 +84,6 @@ public final class Personnel implements InterfacePersonnel {
 	public void print() {
 		System.out.println("Nom : " + nom + ", Prenom : " + prenom
 				+ ", Date de Naissance : " + dateNaissance
-				+ ", Numero(s) de telephone : " + numTel
-				+ "\n");
+				+ ", Numero(s) de telephone : " + numTel);
 	}
 }

@@ -1,5 +1,6 @@
 package Priscille_DAOULAS.pglp_4_1;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -11,7 +12,7 @@ public class CompositePersonnel implements InterfacePersonnel {
 	/**
 	 * Liste de membres du personnels d'un même composite.
 	 */
-	private ArrayList<InterfacePersonnel> list = 
+	private ArrayList<InterfacePersonnel> list =
 			new ArrayList<InterfacePersonnel>();
 	/**
 	 * Identifiant d'un composite.
@@ -65,5 +66,42 @@ public class CompositePersonnel implements InterfacePersonnel {
 	 */
 	public final int getId() {
 		return id;
+	}
+	/**
+	 * Fonction qui fait un parcours en largeur.
+	 * @param ip InterfacePersonnel à afficher
+	 */
+	public static void parcoursLargeur(final InterfacePersonnel ip) {
+		ArrayDeque<InterfacePersonnel> file1 =
+				new ArrayDeque<InterfacePersonnel>();
+		ArrayDeque<InterfacePersonnel> file2 =
+				new ArrayDeque<InterfacePersonnel>();
+		InterfacePersonnel i;
+		file2.add(ip);
+		while (!file2.isEmpty()) {
+			i = file2.pollFirst();
+			file1.add(i);
+			if (i.getClass() == CompositePersonnel.class) {
+				CompositePersonnel cp = (CompositePersonnel) i;
+				Iterator<InterfacePersonnel> it =
+						cp.iterateur();
+				while (it.hasNext()) {
+					i = it.next();
+					if (!file2.contains(i)
+							&& !file1.contains(i)) {
+						file2.add(i);
+					}
+				}
+			}
+		}
+		for (InterfacePersonnel ip2 : file1) {
+			if (ip2.getClass() == CompositePersonnel.class) {
+				CompositePersonnel cp2 =
+						(CompositePersonnel) ip2;
+				System.out.println("Id : " + cp2.getId());
+			} else {
+				ip2.print();
+			}
+		}
 	}
 }
