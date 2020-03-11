@@ -28,6 +28,7 @@ public final class App {
 		Personnel p2 = new Personnel.Builder("Jean", "Jacques",
 				java.time.LocalDate.of(2005, 04, 16),
 				null).build();
+		AfficheParGroupe apg = new AfficheParGroupe();
         c1.add(c2);
         c1.add(p1);
         c2.add(c3);
@@ -35,6 +36,6 @@ public final class App {
         System.out.println("Parcours en profondeur : ");
         c1.print();
         System.out.println("\nParcours en largeur : ");
-        CompositePersonnel.parcoursLargeur(c1);
+        apg.parcoursLargeur(c1);
     }
 }
