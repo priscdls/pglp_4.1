@@ -7,7 +7,8 @@ import java.util.Iterator;
  * Pattern Composite CompositePersonnel
  * implémentant l'interface InterfacePersonnel.
  */
-public class CompositePersonnel implements InterfacePersonnel, Iterable<InterfacePersonnel> {
+public class CompositePersonnel implements InterfacePersonnel,
+Iterable<InterfacePersonnel> {
 	/**
 	 * Liste de membres du personnels d'un même composite.
 	 */
