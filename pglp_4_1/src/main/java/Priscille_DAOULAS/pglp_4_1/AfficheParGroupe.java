@@ -22,6 +22,7 @@ public class AfficheParGroupe implements Iterable<InterfacePersonnel> {
 	 * @param ip InterfacePersonnel à afficher
 	 */
 	public void parcoursLargeur(final InterfacePersonnel ip) {
+		file = new ArrayDeque<InterfacePersonnel>();
 		ArrayDeque<InterfacePersonnel> file2 =
 				new ArrayDeque<InterfacePersonnel>();
 		InterfacePersonnel i;
@@ -42,6 +43,11 @@ public class AfficheParGroupe implements Iterable<InterfacePersonnel> {
 				}
 			}
 		}
+	}
+	/**
+	 * Affichage du parcours en largeur.
+	 */
+	public void print() {
 		for (InterfacePersonnel ip2 : file) {
 			if (ip2.getClass() == CompositePersonnel.class) {
 				CompositePersonnel cp2 =

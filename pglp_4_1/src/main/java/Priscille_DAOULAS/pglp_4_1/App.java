@@ -37,5 +37,6 @@ public final class App {
         c1.print();
         System.out.println("\nParcours en largeur : ");
         apg.parcoursLargeur(c1);
+        apg.print();
     }
 }
