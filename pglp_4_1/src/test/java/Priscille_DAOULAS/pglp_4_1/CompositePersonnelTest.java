@@ -15,7 +15,7 @@ public class CompositePersonnelTest {
 	@Test
 	public void test() {
 		CompositePersonnel c = new CompositePersonnel();
-		Iterator<InterfacePersonnel> it = c.iterateur();
+		Iterator<InterfacePersonnel> it = c.iterator();
 		assertFalse(it.hasNext());
 	}
 	@Test
@@ -24,7 +24,7 @@ public class CompositePersonnelTest {
 	 */
 	public void testAjout() {
 		CompositePersonnel c1 = new CompositePersonnel();
-		Iterator<InterfacePersonnel> it = c1.iterateur();
+		Iterator<InterfacePersonnel> it = c1.iterator();
 		Personnel p = new Personnel.Builder("Daoulas","Priscille",java.time.LocalDate.of(1996, 05, 23),null).build();
 		c1.add(p);
 		assertTrue(it.hasNext());
@@ -35,7 +35,7 @@ public class CompositePersonnelTest {
 	 */
 	public void testSuppression() {
 		CompositePersonnel c1 = new CompositePersonnel();
-		Iterator<InterfacePersonnel> it = c1.iterateur();
+		Iterator<InterfacePersonnel> it = c1.iterator();
 		CompositePersonnel c2 = new CompositePersonnel();
 		c1.add(c2);
 		c1.remove(c2);
