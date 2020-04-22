@@ -1,4 +1,4 @@
-package Priscille_DAOULAS.pglp_4_1;
+package priscille.pglp_4_1;
 
 import java.util.ArrayDeque;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package Priscille_DAOULAS.pglp_4_1;
+package priscille.pglp_4_1;
 
 import static org.junit.Assert.*;
 
@@ -27,6 +27,7 @@ public class CompositePersonnelTest {
 		Iterator<InterfacePersonnel> it = c1.iterator();
 		Personnel p = new Personnel.Builder("Daoulas","Priscille",java.time.LocalDate.of(1996, 05, 23),null).build();
 		c1.add(p);
+		c1.print();
 		assertTrue(it.hasNext());
 	}
 	@Test

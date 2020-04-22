@@ -1,4 +1,4 @@
-package Priscille_DAOULAS.pglp_4_1;
+package priscille.pglp_4_1;
 
 import static org.junit.Assert.*;
 
@@ -45,6 +45,7 @@ public class AffichageParGroupeTest {
         while (it.hasNext()) {
         	listParcours.add(it.next());
         }
+        apg.print();
         assertTrue(listParcoursExacte.toString().equalsIgnoreCase(listParcours.toString()));
 	}
 
